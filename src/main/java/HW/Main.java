@@ -11,7 +11,8 @@ public class Main {
     //variable name = String key
     //numeric value = assigned int or double value
     //Maps unique requirement allows for variable reassignment easily, only one key can exist of a type so
-    //multiple declarations will simply update the existing key's value
+    //multiple declarations will simply update the existing key's value, handling type checking as well with
+    //a map for each data type
     private static final Map<String, Integer> intVars = new HashMap<>();
     private static final Map<String, Double> doubleVars = new HashMap<>();
 
@@ -23,6 +24,7 @@ public class Main {
                 if (!line.isEmpty()) {
                     //Removable printing of processed lines
                     //System.out.println(line);
+
                     //If line has text(is not empty), process it
                     processLine(line);
                 }
@@ -88,7 +90,7 @@ public class Main {
             String varName = matcher.group(1);
             String value = matcher.group(2);
 
-            // Ensure variable exists before assignment
+            // Ensure variable exists before assignment, and check which map it should be assigned to
             if (intVars.containsKey(varName)) {
                 if (intVars.containsKey(value)) {
                     intVars.put(varName, intVars.get(value));
