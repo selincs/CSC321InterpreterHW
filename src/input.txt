@@ -1,0 +1,15 @@
+int x = 5;
+
+int y = 6;
+
+print(x+y*y);
+
+It should also, equivalently, be able to run:
+
+int val;
+
+val = 10;
+
+int other = -10;
+
+print(x-y);

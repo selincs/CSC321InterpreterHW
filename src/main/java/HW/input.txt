@@ -1,0 +1,23 @@
+int x = 5;
+
+int y = 6;
+
+print(x+y*y);
+
+It should also, equivalently, be able to run:
+
+int val;
+
+val = 10;
+
+int other = -10;
+
+double val1 = 11.5;
+
+double other1 = -11.0;
+
+print(val-other);
+print(val1-other1);
+
+print(6+6);
+print(7.7+5.5);
